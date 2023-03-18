@@ -14,6 +14,13 @@ div.jQKeyboardRow {
   text-align: center;
 }
 
+#jQKeyboardDisplay {
+  width: 96.2vw;
+  line-height: 6vmin;
+  min-height: 6vmin;
+  margin-bottom: 0.2rem;
+}
+
 button.jQKeyboardBtn {
   color: black;
   background: white;

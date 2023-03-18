@@ -110,6 +110,13 @@ function createKeypadContainer () {
 function createKeypad (set) {
   $('#jQKeyboardContainer').empty();
   
+  // add content display
+  $('#jQKeyboardContainer').append(
+    $('<div class="jQKeyboardRow" name="jQKeyboardRow"></div>').
+      append('<div id="jQKeyboardDisplay">&nbsp;</div>')
+  );
+  $('#jQKeyboardDisplay').html( $(activeInput.htmlElem).val() );
+  
   var layout = activeInput.keyboardLayout.layout[activeInput.keyboardType][set];
 
   for (var i = 0; i < layout.length; i++) {
@@ -189,6 +196,7 @@ function getKeyPressedValue (clickedBtn) {
   
   // update new value and set caret position
   $(activeInput.htmlElem).val(newVal);
+  $('#jQKeyboardDisplay').html(newVal);
   setCaretPosition(activeInput.htmlElem, caretPos);
 
   if (closeKeypad) {
