@@ -1,25 +1,24 @@
 # jQKeyboard
-jQKeyboard is a jQuery plugin that allow you to add a virtual keyboard to input text field.
+jQKeyboard is a jQuery plugin that allow you to add a virtual keyboard to input
+text field ([view demo](https://acavalin.github.io/jQKeyboard/)).
 
 # Requirement
-To use jQKeyboard, you need <a src ="https://jquery.com/">jQuery library</a> and include it at your page header.
+Include [jQuery](https://jquery.com) and `jQKeyboard.css` in the page.
 
 # Usage
-To enable jQKeyboard, just addd code below to your script tag.
-$('input').initKeypad();
 
-OR
-
-you may want certain input fields only to display the keyboard, so just add class to those fields.
+~~~javascript
+// show keyboard on click on input field
+// HTML: <input type="text" name="q" id="q" class="jQKeyboard">
 $('input.jQKeyboard').initKeypad();
 
-# Improvement
-- Add numeric keyboard
-- Input validation
+// show keyboard on click on button with target
+// HTML: <input type="text" name="q" id="q">
+//       <button class="jQKeyboardToggle" data-field="#q">Show Keyboard</button>
+$('.jQKeyboardToggle').initKeypad();
+~~~
 
-License
-Copyright 2015, Ho Poi Yee
+# License
 Licensed under MIT license.
-
-Contributing
-I love pull requests. If you want to contribute, please fork the codes and submit a pull request.
+* Initial version: copyright 2015, [Ho Poi Yee](https://github.com/poiyee/jQKeyboard)
+* Responsive B/N screens version: copyright 2023, [acavalin](https://github.com/acavalin/jQKeyboard)
